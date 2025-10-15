@@ -1,0 +1,13 @@
+
+venv/
+asl_env/
+
+
+asl_number_dataset/
+asl_alphabet_dataset/
+datasets/
+
+
+__pycache__/
+*.pyc
+*.pyo

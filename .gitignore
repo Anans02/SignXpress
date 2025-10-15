@@ -1,0 +1,11 @@
+# Virtual environments
+venv/
+asl_env/
+asl_number_dataset/
+asl_alphabet_dataset/
+
+# Python cache
+__pycache__/
+*.pyc
+
+
