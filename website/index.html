@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignXpress - Sign Language Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Page -->
+        <div id="loginPage" class="auth-page">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1 class="brand-title">SignXpress</h1>
+                </div>
+                
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign In</button>
+                    <p class="auth-switch">
+                        Don't have an account? 
+                        <a href="#" id="showSignup">Sign up here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signupPage" class="auth-page hidden">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1 class="brand-title">SignXpress</h1>
+                </div>
+                
+                <form id="signupForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Create Account</button>
+                    <p class="auth-switch">
+                        Already have an account? 
+                        <a href="#" id="showLogin">Sign in here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboardPage" class="dashboard-page hidden">
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <h1 class="dashboard-title">SignXpress</h1>
+                    <div class="header-actions">
+                        <div class="user-profile">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userName">User</span>
+                        </div>
+                        <button id="logoutBtn" class="btn-logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-main">
+            <div class="welcome-section">
+                <h2>Continue Learning</h2>
+                <p>Your sign language journey awaits</p>
+            </div>
+
+                <div class="modules-grid">
+                    <div class="module-card" data-module="numbers">
+                        <div class="module-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Numbers</h3>
+                        <p>Learn sign language for numbers 0-9</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                        <button class="btn-module">Start Learning</button>
+                    </div>
+
+                    <div class="module-card" data-module="alphabets">
+                        <div class="module-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <h3>Alphabets</h3>
+                        <p>Master the ASL alphabet from A to Z</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                        <button class="btn-module">Start Learning</button>
+                    </div>
+
+                    <div class="module-card" data-module="words">
+                        <div class="module-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Words</h3>
+                        <p>Learn common sign language words</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                        <button class="btn-module">Start Learning</button>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <h3>Your Progress</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Hours Learned</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Signs Mastered</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Day Streak</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
